@@ -1,17 +1,21 @@
 databaseChangeLog:
   - changeSet:
-      id: createTable-user
+      id: import-data
       author: xxx
       changes:
-        - createTable:
+        - loadUpdateData:
             columns:
               - column:
                   name: id
-                  type: varchar(32)
+                  type: string
               - column:
                   name: kind
-                  type: varchar(32)
+                  type: string
               - column:
                   name: name
-                  type: varchar(256)
+                  type: string
+            encoding: UTF-8
+            file: our_users.csv
+            relativeToChangelogFile: true
+            primaryKey: id
             tableName: our_users

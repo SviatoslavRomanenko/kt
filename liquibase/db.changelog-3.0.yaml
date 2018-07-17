@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: renameColumn-kind-to-role
+      author: xxx
+      changes:
+      - renameColumn:
+          newColumnName: role
+          oldColumnName: kind
+          tableName: our_users
